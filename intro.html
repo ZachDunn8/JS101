@@ -1,0 +1,184 @@
+<script type="text/javascript">
+
+// Print stuff...
+// semi-colons are optional (like Python)
+// EVERYTHING inside the browser...repeat EVERYTHING belongs to the window object
+// alert("Hello, World");
+
+// use the console to print. we will use this ALL the time
+// console.log("Hello, World");
+
+
+// actually write to the window itself. the document object 
+// is where all the HTML is at
+// document.write("Hello,World");
+
+// VARIABLES
+// Same as every other language....a variable is a place to stash something
+// 	(number, string, array, object) that you could write yourself, but a var is faster
+// Data-types available:
+// 1. Strings
+// 2. Numbers - JavaScript has only the Number data type
+// 2a. float
+// 2b. Integer
+// 3. Booleans
+// 4. Arrays
+// 5. Objects (Dictionary/Object)
+
+// JS variables are created dynamically, just like Python. BUT, they need to start
+// with var when first created/used.
+// use strict;
+
+// var means I am declaring a variable in the current scope
+// -current scope might be:
+// 1. Window (global)
+// 2. function
+// 3. prototype method
+
+// You only us var one time. Once it's declared, you don't declare it again.
+
+// In Python we used snake_case.
+// In JS use camelCase
+// var string fullName = 'Zach Dunn' C# or Java
+// var fullName='Zach Dunn';
+// console.log(fullName)
+// fullName = "Hayes Capers"
+// console.log(fullName)
+// // Just like Python, you can escape anything with a \?
+// fullName = "Hayes \"Bender\"Capers";
+// // fullName = "Hayes "Bender"Capers";
+// var firstlName = "Hayes";
+// var nickName = "Bender";
+// var lastName = "Capers";
+// fullName = firstName + " " + nickName + " " + lastName;
+// window.console.log(fullName)
+// // template literals (ES6)
+// fullName ='${firstName} "${nickName}" ${lastName}'
+// fullName = '%s "%s" %s' % (a,b,c)
+// console.log(fullName);
+
+// Numbers
+// var theYear = 2017; //Integer
+// var pi = 3.14 //float
+// //In JavaScript, you can get the datatype, by running the type of method
+// console.log(typeof(theYear));
+// console.log(typeof(pi));
+// var theYearAsAString = "2017";
+// console.log(typeof(theYearAsAString)); //string
+
+// //Math just like Python
+// var twoYearsAgo = theYear - 2;
+// var twoYearsFromNow = theYear + 2;
+// //A STRING ALWAYS WINS with a +
+// console.log(theYearAsAString + 2);
+// console.log(.2+.1); //Any guesses?
+
+// Booleans
+// just like Python, 1 or 0, off or on, true or false
+// True = true
+// var theTruth = true;
+// console.log(typeof(theTruth));
+// var theLie = false;
+
+// Math
+// +
+// -
+// *
+// /
+// %
+
+// var amIEven = 11 % 2;
+// console.log(amIEven);
+
+// //Incramenting...
+// var i = 1;
+// // c--> c++
+// i++; // i += 1;
+// // This is postfixing
+// i--; // i -= 1;
+// // i += 10;
+
+// console.log(i);
+// console.log(i++);
+// //Prefixing
+// console.log(i);
+// console.log(++i);
+
+// Order of operations is the same as Python.
+// * and / always come before + and -
+// always left to right
+// () overrides anything
+
+// 2 + 3 * 4 = 14 // not 20
+// 2 + 4 / 2 = 4 // not 6
+// (2 + 3) * 4 = 20
+
+// Prompt method
+// Belongs to the window (just like alert)
+// Take 2 arguments, the first is the message to display, the second
+// 	(optional) is the default response
+// var getUserName = prompt("What is your name?", "Zach");
+// prompts are obnoxious, Don't use them or if you use them make sure to tell
+// them I said not to use them. We will use forms/AJAX
+
+//CONDITIONALS
+// var classSize = 19; // Number
+// var userResponse = prompt("How big is your class?");
+// // = is an assignment of the thing on the right to the thing on the left
+// // == is a comparison operator of the thing on the right to the thing on the left
+// // === is the same as == but will also check for data type equality
+// if(userResponse == classSize){
+// 	alert("You are in the September class")
+//}
+// var userResponseAsANumber = Number(userResponse);
+// if(userResponseAsANumber === classSize){
+// 	alert("You are in the September class!");
+// }else if(userResponse != classSize){
+// 	alert("You are NOT in the September class!")
+// }else{
+	// this would make python turn into the hulk
+//}
+
+// var round = Math.round(10.2);
+// console.log(round);
+// var up = Math.ceil(10.00001) // 11
+// console.log(up)
+// var down = Math.floor(10.99999) // 10
+// parseInt....same as Math.floor() or Number()
+
+// 0.0000000000001
+// floor = 0
+// ceil = 1
+// parseInt = 0
+// round = 0
+
+// 0.999999999999
+// floor = 0
+// ceil = 1
+// parseInt = 0
+// round = 1
+
+// RANDOM
+// var rand = Math.random()
+// console.log(rand);
+// var betweenOneAndTen = Math.ceil(rand * 10);
+// console.log(betweenOneAndTen);
+var rand = Math.random();
+var numberGenerated = Math.ceil(rand * 10);
+console.log(numberGenerated);
+var guessNum = prompt("Pick a number between 1 and 10");
+if(guessNum == numberGenerated){
+	console.log("Congrats!")
+}else if(guessNum == numberGenerated + 2){
+	console.log("Close! The correct answer was:" + numberGenerated) 
+}else if(guessNum == numberGenerated - 2){
+	console.log("Close! The correct answer was:" + numberGenerated)
+}else{
+	console.log("Try again dummy!")
+}
+
+
+
+
+
+</script>

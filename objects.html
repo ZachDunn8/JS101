@@ -1,0 +1,90 @@
+
+<script type="text/javascript">
+// An arry is []
+// // This is an empty array!
+var students = [];
+
+//An object is {}
+// // This is an empty object!
+var student = {}
+
+// Just like dictionaries, objects are a combination of properties and values (keys
+// 	and values)
+// syntax is :
+// {
+// 	property: value
+// }
+
+// student['name'] = "Zach" Python way
+student.name = "Zach";
+console.log(student);
+
+// Unlike Python, the property doesn't have to have "" around
+student = {
+	name: "Zach"
+}
+
+student.age = 28;
+console.log(student);
+
+// Can define multiple properties at definition. Seperate with a ,
+student2 = {
+	name: "Jennifer",
+	profession: "Student",
+	language: "JavaScript"
+}
+
+console.log(student2.language);
+
+var student3 = {
+	name: "Akil",
+	friends: [
+		"Amir",
+		"Binh",
+		"jong"
+		]
+}
+	
+	var student4 = {
+		name: "Valerie",
+		friends: [],
+		sayHello: function(name){
+			console.log(`Hello, ${name}`)
+		},
+		addFriend: function(newFriendName){
+			this.friends.push(newFriendName)
+		}
+	}
+	console.log(student4.name);
+	student4.sayHello("Eddie");
+	// a method without () is simply "Code". In order to RUN the code, you need ()
+	console.log(student4.sayHello);
+	console.log(student4.sayHello());
+	console.log(student4);
+
+	// // BRACKEY NOTATION
+	// if you need a variable property, you MUST us the bracket notation.
+	userProp = prompt("What property would you like", name);
+
+	// console.log(student4['name'])\
+	// // THis will look for the property "userProp"
+	// console.log(Student4.userProp)
+	//this will convert the variable userProp into the property namme
+	console.log(Student4[userProp])
+
+	// students = [
+	// 	student,
+	// 	student2
+	// 	student3
+	// 	student4
+	// 	];
+
+
+		console.log(students[2], name);
+		// console.log(students[2],friends[2]);
+		// if you reference a property that does not exist
+		// 	you will just get "undefined". In Python you'd get a reference error
+		student[3].sayHello(" Michael")
+		// students[3].friends(); will error
+</script>
+</script>
